@@ -30,6 +30,10 @@ describe('AsyncStreamEmitter', () => {
     cancelAllPendingWaits();
   });
 
+  it('should expose an emit method', async () => {
+    assert.equal(!!streamEmitter.emit, true);
+  });
+
   it('should expose a listener method', async () => {
     assert.equal(!!streamEmitter.listener, true);
   });
@@ -38,7 +42,7 @@ describe('AsyncStreamEmitter', () => {
     assert.equal(!!streamEmitter.closeListener, true);
   });
 
-  it('should expose an emit method', async () => {
-    assert.equal(!!streamEmitter.emit, true);
+  it('should expose a closeAllListeners method', async () => {
+    assert.equal(!!streamEmitter.closeAllListeners, true);
   });
 });
