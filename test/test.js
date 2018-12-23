@@ -1,5 +1,5 @@
 const assert = require('assert');
-const StreamEmitter = require('../index');
+const AsyncStreamEmitter = require('../index');
 
 let pendingTimeoutSet = new Set();
 
@@ -19,11 +19,11 @@ function cancelAllPendingWaits() {
   }
 }
 
-describe('StreamEmitter', () => {
+describe('AsyncStreamEmitter', () => {
   let streamEmitter;
 
   beforeEach(async () => {
-    streamEmitter = new StreamEmitter();
+    streamEmitter = new AsyncStreamEmitter();
   });
 
   afterEach(async () => {
