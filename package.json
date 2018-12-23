@@ -1,5 +1,5 @@
 {
-  "name": "stream-emitter",
+  "name": "async-stream-emitter",
   "version": "1.0.0",
   "description": "An alternantive to EventEmitter using async iterable streams.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SocketCluster/stream-emitter.git"
+    "url": "git+https://github.com/SocketCluster/async-stream-emitter.git"
   },
   "keywords": [
     "iterable",
@@ -21,9 +21,9 @@
   "author": "Jonathan Gros-Dubois",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/SocketCluster/stream-emitter/issues"
+    "url": "https://github.com/SocketCluster/async-stream-emitter/issues"
   },
-  "homepage": "https://github.com/SocketCluster/stream-emitter#readme",
+  "homepage": "https://github.com/SocketCluster/async-stream-emitter#readme",
   "devDependencies": {
     "mocha": "^5.2.0"
   },
