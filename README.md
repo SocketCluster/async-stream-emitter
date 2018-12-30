@@ -1,4 +1,4 @@
-# AsyncStreamEmitter
+# async-stream-emitter
 EventEmitter using AsyncIterableStream.
 
 ## Methods:
