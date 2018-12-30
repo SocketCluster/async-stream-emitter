@@ -3,10 +3,10 @@ EventEmitter using AsyncIterableStream.
 
 ## Methods:
 
-- emit
-- listener
-- closeListener
-- closeAllListeners
+- emit(eventName, data)
+- listener(eventName)
+- closeListener(eventName)
+- closeAllListeners()
 
 ## Usage examples
 
@@ -41,3 +41,9 @@ function wait(duration) {
   });
 }
 ```
+
+Note that unlike with `EventEmitter`, you cannot get the count for the number of active listeners at any given time.
+This is intentional as it encourages code to be written in a more declarative style.
+
+If you want to track listeners, you should do it yourself.
+The new ECMAScript `Symbol` type should make tracking object references easier: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
