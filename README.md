@@ -24,11 +24,10 @@ let emitter = new AsyncStreamEmitter();
 })();
 
 (async () => {
-  // The event data is always an array so we should use destructuring.
   for await (let data of emitter.listener('foo')) {
     // data is 'hello'
   }
-  console.log('The listener was closed');
+  console.log('The listener was closed.');
 })();
 
 // Utility function.
