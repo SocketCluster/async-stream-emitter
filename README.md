@@ -15,7 +15,7 @@ let emitter = new AsyncStreamEmitter();
 
 (async () => {
   await wait(10);
-  emitter.emit('foo', 123, 'hello');
+  emitter.emit('foo', 'hello');
 
   // This will cause all for-await-of loops for that event to exit.
   // Note that you can also use the 'break' statement inside
@@ -25,9 +25,8 @@ let emitter = new AsyncStreamEmitter();
 
 (async () => {
   // The event data is always an array so we should use destructuring.
-  for await (let [someNumber, someString] of emitter.listener('foo')) {
-    // someNumber is 123
-    // someString is 'hello'
+  for await (let data of emitter.listener('foo')) {
+    // data is 'hello'
   }
   console.log('The listener was closed');
 })();
