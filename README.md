@@ -1,5 +1,5 @@
 # async-stream-emitter
-EventEmitter using AsyncIterableStream.
+EventEmitter using ConsumableStream.
 
 ## Methods:
 

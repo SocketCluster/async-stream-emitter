@@ -1,7 +1,7 @@
 {
   "name": "async-stream-emitter",
   "version": "2.0.0",
-  "description": "An alternantive to EventEmitter using async iterable streams.",
+  "description": "An alternantive to EventEmitter using consumable streams.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/_mocha --reporter spec --timeout 10000 --slow 10000"
@@ -28,6 +28,6 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "stream-demux": "^5.1.0"
+    "stream-demux": "^6.1.0"
   }
 }
