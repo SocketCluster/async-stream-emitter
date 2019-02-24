@@ -20,15 +20,15 @@ AsyncStreamEmitter.prototype.closeAllListeners = function () {
   this._listenerDemux.closeAll();
 };
 
-AsyncStreamEmitter.prototype.getConsumerStats = function (consumerId) {
+AsyncStreamEmitter.prototype.getListenerConsumerStats = function (consumerId) {
   return this._listenerDemux.getConsumerStats(consumerId);
 };
 
-AsyncStreamEmitter.prototype.getConsumerStatsList = function (eventName) {
+AsyncStreamEmitter.prototype.getListenerConsumerStatsList = function (eventName) {
   return this._listenerDemux.getConsumerStatsList(eventName);
 };
 
-AsyncStreamEmitter.prototype.getConsumerStatsListAll = function () {
+AsyncStreamEmitter.prototype.getAllListenerConsumerStatsList = function () {
   return this._listenerDemux.getConsumerStatsListAll();
 };
 
@@ -40,27 +40,27 @@ AsyncStreamEmitter.prototype.killAllListeners = function () {
   this._listenerDemux.killAll();
 };
 
-AsyncStreamEmitter.prototype.killConsumer = function (consumerId) {
+AsyncStreamEmitter.prototype.killListenerConsumer = function (consumerId) {
   this._listenerDemux.killConsumer(consumerId);
 };
 
-AsyncStreamEmitter.prototype.getBackpressure = function (eventName) {
+AsyncStreamEmitter.prototype.getListenerBackpressure = function (eventName) {
   return this._listenerDemux.getBackpressure(eventName);
 };
 
-AsyncStreamEmitter.prototype.getBackpressureAll = function () {
+AsyncStreamEmitter.prototype.getAllListenersBackpressure = function () {
   return this._listenerDemux.getBackpressureAll();
 };
 
-AsyncStreamEmitter.prototype.getConsumerBackpressure = function (consumerId) {
+AsyncStreamEmitter.prototype.getListenerConsumerBackpressure = function (consumerId) {
   return this._listenerDemux.getConsumerBackpressure(consumerId);
 };
 
-AsyncStreamEmitter.prototype.hasConsumer = function (eventName, consumerId) {
+AsyncStreamEmitter.prototype.hasListenerConsumer = function (eventName, consumerId) {
   return this._listenerDemux.hasConsumer(eventName, consumerId);
 };
 
-AsyncStreamEmitter.prototype.hasConsumerAll = function (consumerId) {
+AsyncStreamEmitter.prototype.hasAnyListenerConsumer = function (consumerId) {
   return this._listenerDemux.hasConsumerAll(consumerId);
 };
 

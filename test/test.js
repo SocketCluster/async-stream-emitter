@@ -46,16 +46,16 @@ describe('AsyncStreamEmitter', () => {
     assert.equal(!!streamEmitter.closeAllListeners, true);
   });
 
-  it('should expose a getConsumerStats method', async () => {
-    assert.equal(!!streamEmitter.getConsumerStats, true);
+  it('should expose a getListenerConsumerStats method', async () => {
+    assert.equal(!!streamEmitter.getListenerConsumerStats, true);
   });
 
-  it('should expose a getConsumerStatsList method', async () => {
-    assert.equal(!!streamEmitter.getConsumerStatsList, true);
+  it('should expose a getListenerConsumerStats method', async () => {
+    assert.equal(!!streamEmitter.getListenerConsumerStatsList, true);
   });
 
-  it('should expose a getConsumerStatsListAll method', async () => {
-    assert.equal(!!streamEmitter.getConsumerStatsListAll, true);
+  it('should expose a getAllListenerConsumerStatsList method', async () => {
+    assert.equal(!!streamEmitter.getAllListenerConsumerStatsList, true);
   });
 
   it('should expose a killListener method', async () => {
@@ -66,27 +66,27 @@ describe('AsyncStreamEmitter', () => {
     assert.equal(!!streamEmitter.killAllListeners, true);
   });
 
-  it('should expose a killConsumer method', async () => {
-    assert.equal(!!streamEmitter.killConsumer, true);
+  it('should expose a killListenerConsumer method', async () => {
+    assert.equal(!!streamEmitter.killListenerConsumer, true);
   });
 
-  it('should expose a getBackpressure method', async () => {
-    assert.equal(!!streamEmitter.getBackpressure, true);
+  it('should expose a getListenerBackpressure method', async () => {
+    assert.equal(!!streamEmitter.getListenerBackpressure, true);
   });
 
-  it('should expose a getBackpressureAll method', async () => {
-    assert.equal(!!streamEmitter.getBackpressureAll, true);
+  it('should expose a getAllListenersBackpressure method', async () => {
+    assert.equal(!!streamEmitter.getAllListenersBackpressure, true);
   });
 
-  it('should expose a getConsumerBackpressure method', async () => {
-    assert.equal(!!streamEmitter.getConsumerBackpressure, true);
+  it('should expose a getListenerConsumerBackpressure method', async () => {
+    assert.equal(!!streamEmitter.getListenerConsumerBackpressure, true);
   });
 
-  it('should expose a hasConsumer method', async () => {
-    assert.equal(!!streamEmitter.hasConsumer, true);
+  it('should expose a hasListenerConsumer method', async () => {
+    assert.equal(!!streamEmitter.hasListenerConsumer, true);
   });
 
-  it('should expose a hasConsumerAll method', async () => {
-    assert.equal(!!streamEmitter.hasConsumerAll, true);
+  it('should expose a hasAnyListenerConsumer method', async () => {
+    assert.equal(!!streamEmitter.hasAnyListenerConsumer, true);
   });
 });

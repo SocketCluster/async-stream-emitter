@@ -28,6 +28,6 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "stream-demux": "^6.1.0"
+    "stream-demux": "^7.0.0"
   }
 }
