@@ -54,8 +54,8 @@ describe('AsyncStreamEmitter', () => {
     assert.equal(!!streamEmitter.getListenerConsumerStatsList, true);
   });
 
-  it('should expose a getAllListenerConsumerStatsList method', async () => {
-    assert.equal(!!streamEmitter.getAllListenerConsumerStatsList, true);
+  it('should expose a getAllListenersConsumerStatsList method', async () => {
+    assert.equal(!!streamEmitter.getAllListenersConsumerStatsList, true);
   });
 
   it('should expose a killListener method', async () => {

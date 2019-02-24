@@ -28,7 +28,7 @@ AsyncStreamEmitter.prototype.getListenerConsumerStatsList = function (eventName)
   return this._listenerDemux.getConsumerStatsList(eventName);
 };
 
-AsyncStreamEmitter.prototype.getAllListenerConsumerStatsList = function () {
+AsyncStreamEmitter.prototype.getAllListenersConsumerStatsList = function () {
   return this._listenerDemux.getConsumerStatsListAll();
 };
 
