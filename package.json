@@ -1,6 +1,6 @@
 {
   "name": "async-stream-emitter",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "An alternantive to EventEmitter using consumable streams.",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,6 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "stream-demux": "^7.0.0"
+    "stream-demux": "^7.0.1"
   }
 }
