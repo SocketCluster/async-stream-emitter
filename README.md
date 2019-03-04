@@ -1,12 +1,16 @@
 # async-stream-emitter
 EventEmitter using ConsumableStream.
 
-## Methods:
+## Main methods:
 
 - emit(eventName, data)
 - listener(eventName)
 - closeListener(eventName)
 - closeAllListeners()
+- killListener(eventName)
+- killAllListeners()
+- getListenerBackpressure(eventName)
+- getAllListenersBackpressure()
 
 ## Usage examples
 
