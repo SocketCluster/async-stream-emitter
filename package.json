@@ -42,6 +42,6 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "stream-demux": "^7.0.1"
+    "stream-demux": "^8.0.0"
   }
 }
