@@ -1,6 +1,6 @@
 {
   "name": "async-stream-emitter",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "description": "An alternantive to EventEmitter using consumable streams.",
   "main": "index.js",
   "scripts": {
@@ -42,6 +42,6 @@
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
-    "stream-demux": "^8.1.0"
+    "stream-demux": "^9.0.0"
   }
 }
