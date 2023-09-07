@@ -2,7 +2,7 @@ const StreamDemux = require('stream-demux');
 
 function AsyncStreamEmitter(options) {
   let { usabilityMode } = options || {};
-  this.usabilityMode = usabilityMode;
+  this.usabilityMode = usabilityMode || false;
   this._listenerDemux = new StreamDemux();
 }
 
@@ -10,8 +10,8 @@ AsyncStreamEmitter.prototype.emit = function (eventName, data) {
   this._listenerDemux.write(eventName, data);
 };
 
-AsyncStreamEmitter.prototype.listener = function (eventName, usabilityMode) {
-  return this._listenerDemux.stream(eventName, usabilityMode);
+AsyncStreamEmitter.prototype.listener = function (eventName) {
+  return this._listenerDemux.stream(eventName, this.usabilityMode);
 };
 
 AsyncStreamEmitter.prototype.closeListener = function (eventName) {
