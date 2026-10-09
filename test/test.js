@@ -384,20 +384,28 @@ describe('AsyncStreamEmitter', () => {
       streamEmitter.emit('bar', 'a' + i);
     }
 
+    // Removing the listener kills its consumers; pending events are discarded
+    // and the for-await-of loop above ends instead of being left waiting on a
+    // stream which can no longer be reached through the emitter.
     streamEmitter.removeListener('bar');
     await wait(0);
-    streamEmitter.listener('bar').once();
+
+    assert.notEqual(packets, null);
+    assert.equal(packets.length, 0);
+    assert.equal(ended.length, 1);
+    assert.equal(ended[0], 'bar');
+    assert.equal(streamEmitter.getListenerConsumerCount('bar'), 0);
+
+    // A listener created after the removal is backed by a new stream, so
+    // events emitted from now on do not reach the loop which was killed.
+    let nextEvent = streamEmitter.listener('bar').once();
 
     for (let i = 0; i < 5; i++) {
       streamEmitter.emit('bar', 'b' + i);
     }
 
-    await wait(0);
-
-    assert.notEqual(packets, null);
-    assert.equal(packets.length, 5);
-    assert.equal(packets[0], 'a0');
-    assert.equal(packets[4], 'a4');
-    assert.equal(ended.length, 0);
+    assert.equal(await nextEvent, 'b0');
+    assert.equal(packets.length, 0);
+    assert.equal(ended.length, 1);
   });
 });
